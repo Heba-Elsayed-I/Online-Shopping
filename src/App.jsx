@@ -28,7 +28,7 @@ export default function App() {
      {path : 'wishlist' , element :<ProtectedRoute><WishList/></ProtectedRoute>  } , 
      {path : 'register' , element : <Register/> } , 
      {path : 'login' , element : <Login/> } ,
-   
+     {path : 'productdetails/:id' , element : <ProductDetails/> } ,
      {path : '*' , element : <NotFound/> } ,
     ]}
   ])
