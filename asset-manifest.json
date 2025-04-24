@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Online-Shopping/static/css/main.a36bfb02.css",
-    "main.js": "/Online-Shopping/static/js/main.d00d4f8e.js",
+    "main.css": "/Online-Shopping/static/css/main.6e1b8fc3.css",
+    "main.js": "/Online-Shopping/static/js/main.0b3f3868.js",
     "static/js/453.53cf1480.chunk.js": "/Online-Shopping/static/js/453.53cf1480.chunk.js",
     "static/media/fa-solid-900.ttf": "/Online-Shopping/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/fa-brands-400.ttf": "/Online-Shopping/static/media/fa-brands-400.1815e00441357e01619e.ttf",
@@ -12,13 +12,17 @@
     "static/media/fa-v4compatibility.ttf": "/Online-Shopping/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/freshcart-logo.svg": "/Online-Shopping/static/media/freshcart-logo.53f7a424c3aedc30a0fb46dc2278137c.svg",
     "static/media/fa-v4compatibility.woff2": "/Online-Shopping/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "static/media/slick.svg": "/Online-Shopping/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Online-Shopping/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Online-Shopping/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Online-Shopping/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Online-Shopping/index.html",
-    "main.a36bfb02.css.map": "/Online-Shopping/static/css/main.a36bfb02.css.map",
-    "main.d00d4f8e.js.map": "/Online-Shopping/static/js/main.d00d4f8e.js.map",
+    "main.6e1b8fc3.css.map": "/Online-Shopping/static/css/main.6e1b8fc3.css.map",
+    "main.0b3f3868.js.map": "/Online-Shopping/static/js/main.0b3f3868.js.map",
     "453.53cf1480.chunk.js.map": "/Online-Shopping/static/js/453.53cf1480.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a36bfb02.css",
-    "static/js/main.d00d4f8e.js"
+    "static/css/main.6e1b8fc3.css",
+    "static/js/main.0b3f3868.js"
   ]
 }
