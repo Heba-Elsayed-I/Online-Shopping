@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import style from './ProductDetails.module.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { PulseLoader } from "react-spinners";
 import Slider from "react-slick";
+import {Helmet} from "react-helmet";
+import { cartContext } from '../../Context/CartContext';
+import toast from 'react-hot-toast';
 export default function ProductDetails() {
   var settings = {
     dots: false,
@@ -19,6 +22,7 @@ export default function ProductDetails() {
   };
  const [detials, setDetails] = useState({})
   const [loading, setLoading] = useState(true)
+  let {addToCart} = useContext(cartContext) 
   let {id} = useParams()
   async function getProductDetails(id){ 
    let {data} = await axios.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`)
@@ -26,6 +30,14 @@ export default function ProductDetails() {
     setLoading(false)
     
   }
+  async function addItem(id){
+    let {data} = await addToCart(id)
+    if(data.status == 'success'){
+     toast.success(data.message ,{
+       icon: '👏',
+     })
+    }
+   }
   useEffect(()=>{
     getProductDetails(id)
   },[])
@@ -38,6 +50,10 @@ export default function ProductDetails() {
   size={50}
 />
    </div> :
+    <>
+    <Helmet>
+      <title>{detials.title}</title>
+    </Helmet>
    <div className="row align-items-center py-5">
     <div className="col-md-4">
     <Slider {...settings}>
@@ -56,11 +72,12 @@ export default function ProductDetails() {
           {detials.ratingsAverage}
         </span>
       </div>
-      <button className='btn bg-main text-main-light w-100 btn-sm'> Add to cart</button>
+      <button className='btn bg-main text-main-light w-100 btn-sm' onClick={()=>addItem(detials.id)}> Add to cart</button>
    
       </div>
     </div>
-   </div> } 
+   </div>
+   </> } 
    </div>
   
 }

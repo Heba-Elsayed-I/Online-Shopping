@@ -18,14 +18,13 @@ export default function FeaturedProducts() {
   })
 
  let{addToCart} =useContext(cartContext)
-async function postToCart(id){
+async function addItem(id){
  let {data} = await addToCart(id)
  if(data.status == 'success'){
   toast.success(data.message ,{
     icon: '👏',
   })
  }
- 
 }
 
 
@@ -55,7 +54,7 @@ async function postToCart(id){
         </span>
       </div>
       </Link>
-      <button onClick={()=>postToCart(product.id)} className='btn bg-main text-main-light w-100 btn-sm'> Add to cart</button>
+      <button onClick={()=>addItem(product.id)} className='btn bg-main text-main-light w-100 btn-sm'> Add to cart</button>
     </div>
     
   </div>

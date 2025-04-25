@@ -38,7 +38,7 @@ getItems()
   } ,[])
   return<>
  <div className="bg-main-light p-4 m-5">
-  <h2 className='fw-bold'>Cart</h2>
+  <h2 className='fw-bold text-center  border-bottom py-3'>Shopping Cart</h2>
  {loading ? 
   <div className="loading">
             <PulseLoader 
@@ -49,8 +49,6 @@ getItems()
   
  </div>
  :<>
- <p className='text-main'> Num of cart items :{cartItems.numOfCartItems}</p>
- <p className='text-main'> Total cart price :{cartItems.data.totalCartPrice} EGP</p>
    {cartItems.data.products.map(product=> <div key={product.product.id} className="row align-items-center m-0 p-2 border-bottom">
     <div className="col-md-1">
       <div className="img">
@@ -61,7 +59,7 @@ getItems()
       <div className="item">
         <h3 className='h5 fw-bold'>{product.product.title.split(' ').slice(0,3).join(' ')}</h3>
         <p className='text-main fw-bold'>Price : {product.price} EGP</p>
-        <button className='btn' onClick={()=>deleteItems(product.product.id)}><i className="fa-solid fa-trash text-danger"></i> Remove</button>
+        <button  className='btn fw-bold' onClick={()=>deleteItems(product.product.id)}><i className="fa-solid fa-trash text-danger "></i> Remove</button>
       </div>
     </div>
     <div className="col-md-1">
@@ -72,6 +70,7 @@ getItems()
       </div>
     </div>
    </div>)}
+   <p className=' py-3'> Subtotal  {cartItems.price} ({cartItems.numOfCartItems} items) :  <span className='fw-bold'>{cartItems.data.totalCartPrice} EGP</span> </p>
  </>}
  </div> 
  </>
