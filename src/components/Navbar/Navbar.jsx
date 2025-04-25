@@ -16,7 +16,7 @@ function Logout(){
   return <>
   <nav className="navbar navbar-expand-lg bg-body-tertiary p-3">
   <div className="container-fluid mx-5 ">
-    <Link className="navbar-brand " to="#">
+    <Link className="navbar-brand " to={''}>
     <img src={Logo} alt='fresh cart'/>
     </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,10 +51,9 @@ function Logout(){
       </ul>
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item d-flex align-items-center">
-          <i className='fab fa-facebook me-3'></i>
-          <i className='fab fa-twitter me-3'></i>
-          <i className='fab fa-instagram me-3'></i>
-          <i className='fab fa-youtube me-3'></i>
+          <Link className="nav-link px-2 fw-bold" to={'cart'}>
+          <i className="fa-solid fa-cart-shopping fs-5"></i></Link>
+          
         </li>  
         
           {userToken !=null? <>

@@ -8,12 +8,24 @@ import "slick-carousel/slick/slick-theme.css";
 import './index.css';
 import App from './App.jsx';
 import UserContextProvider from './Context/UserContext.js';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import CartContextProvider from './Context/CartContext.js';
 
+
+
+
+let queryClient = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    <CartContextProvider>
     <UserContextProvider>
-           <App />
+        <QueryClientProvider client={queryClient} >
+        <App />
+        <ReactQueryDevtools/>
+        </QueryClientProvider> 
     </UserContextProvider>
+    </CartContextProvider>
   
   
    

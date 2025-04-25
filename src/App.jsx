@@ -14,7 +14,7 @@ import UserContextProvider, { UserContext } from './Context/UserContext.js'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute.jsx'
 import WishList from './components/WishList/WishList.jsx'
 import ProductDetails from './components/ProductDetails/ProductDetails.jsx'
-
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function App() {
  
@@ -43,6 +43,6 @@ export default function App() {
   return <>
  
   <RouterProvider router={routers}></RouterProvider>
-  
+   <Toaster/>
   </>
 }

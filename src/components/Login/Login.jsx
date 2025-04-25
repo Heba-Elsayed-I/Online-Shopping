@@ -42,7 +42,7 @@ export default function Login() {
   return (
     <>
       <div className="w-75 mx-auto  py-4">
-        <h2 className="text-center">Login Now</h2>
+        <h2 className="text-center fw-bold">Sign In</h2>
         <form onSubmit={formik.handleSubmit}>
           {apiError? <div className="alert alert-danger">{apiError}</div> : ''}
            <label htmlFor="email">Email : </label>

@@ -44,7 +44,7 @@ export default function Register() {
   return (
     <>
       <div className="w-75 mx-auto  py-4">
-        <h2 className="text-center">Register Now</h2>
+        <h2 className="text-center fw-bold">Sign Up</h2>
         <form onSubmit={formik.handleSubmit}>
           {apiError? <div className="alert alert-danger">{apiError}</div> : ''}
           
